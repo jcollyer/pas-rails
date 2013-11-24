@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  database: pas_database
+  username:
+  host: localhost
+
+test:
+  adapter: postgresql
+  database: pas_database
+  username:
+  host: localhost
+
+production:
+  adapter: postgresql
+  database: pas_database
+  username:
+
