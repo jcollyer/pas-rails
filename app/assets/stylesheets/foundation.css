@@ -1433,7 +1433,7 @@ select {
   .column.xxlarge-uncentered.opposite,
   .columns.xxlarge-uncentered.opposite {
     float: right !important; } }
-button, .button {
+button {
   cursor: pointer;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
