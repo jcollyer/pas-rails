@@ -2,13 +2,70 @@ body {
   line-height: 1.777;
   color: #666a76;
   background: #f8f8f9;
-  font-size: 1em
+  font-family: 'Serifa W01 55 Roman', 'Serifa Std', 'Serifa', 'Museo Slab', 'Rockwell', georgia, serif;
+
 }
-#header {
+a {
+  color: #53a1b8;
+  text-decoration: none;
+}
+#promo {
   background: white;
   box-shadow: 0 -2px 7px #111;
   max-height: 45px;
-  h1 {
-    margin: 0px;
+  padding: 7px;
+  height: 80px;
+  h4 {
+    margin: 0px 20px;
+    text-align: center;
   }
 }
+
+.border-blue {
+  border-bottom: 3px solid #53a1b8;
+  width: 100%;
+}
+
+.button {
+  background: white;
+  border: 1px solid #53a1b8;
+  border-radius: 2px;
+  padding: 0px 10px;
+  transition: all 0.5s;
+  &:hover {
+    background: #53a1b8;
+  }
+}
+
+#nav {
+  a {
+    text-align: center;
+    padding: 10px 0px;
+    display: block;
+    font-size: 23px;
+  }
+  .active {
+    position: relative;
+    &:after {
+      width: 10px;
+      height: 10px;
+      content: '';
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #53a1b8;
+      position: absolute;
+      bottom: 0px;
+      left: 45%;
+    }
+  }
+}
+
+#header {
+  background: #53a1b8;
+  h1{
+    margin: 0px auto;
+  }
+  height: 400px;
+}
+
+
