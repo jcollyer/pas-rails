@@ -44,6 +44,9 @@ a {
     display: block;
     font-size: 23px;
   }
+  li {
+    list-style-type: none;
+  }
   .active {
     position: relative;
     &:after {
@@ -62,10 +65,30 @@ a {
 
 #header {
   background: #53a1b8;
-  h1{
-    margin: 0px auto;
+}
+
+.logo {
+  margin: 0px auto;
+  padding: 20px 0px;
+  width: 430px;
+}
+
+.header-image {
+  margin: 0px auto;
+  width: 140px;
+  img {
+    box-shadow: 0 0 7px #333;
+    border-radius: 50%;
+    border: 2px solid white;
   }
-  height: 400px;
+}
+
+.box1 {
+  background: rgba(0,0,0,0.2);
+  border-radius: 3px;
+  color: #ddd;
+  margin: 40px auto;
+  padding: 20px;
 }
 
 
