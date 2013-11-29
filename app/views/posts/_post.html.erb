@@ -1,3 +1,17 @@
- <h2><%= link_to_unless_current post.title, post %></h2>
- <%= simple_format post.body %>
- <%= image_tag post.image.url(:thumb) %>
+<h2><%= link_to_unless_current post.title, post %></h2>
+<%= post.author %>
+<%= image_tag post.image.url(:thumb) %>
+<%= simple_format post.body %>
+
+<h2>Comments</h2>
+<div id="comments">
+  <%= render :partial => post.comments %>
+</div>
+
+<%= form_for [post, Comment.new] do |f| %>
+  <p>
+    <%= f.label :body, "New comment" %><br/>
+    <%= f.text_area :body %>
+  </p>
+  <p><%= f.submit "Add comment" %></p>
+<% end %>
