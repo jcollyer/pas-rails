@@ -23,6 +23,7 @@
     <%= link_to "All Blog Posts", posts_path %>
   </div>
   <div class="small-12 large-6 columns">
-    <h1>Newsletters</h1>
+    <h1>Newsletters</h1><%= render :partial => @newsletters %>
+    <%= link_to "All Newsletters", newsletters_path %>
   </div>
 </div>

@@ -1,0 +1,5 @@
+<h2><%= link_to_unless_current newsletter.title, newsletter %></h2>
+<%= image_tag newsletter.image.url(:medium) %>
+<%= simple_format newsletter.body %>
+
+
