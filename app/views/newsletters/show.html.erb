@@ -12,7 +12,7 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @newsletter.body %>
+  <%= markdown(@newsletter.body) %>
 </p>
 
 <%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
