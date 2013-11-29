@@ -1,6 +1,6 @@
 <h2><%= link_to_unless_current post.title, post %></h2>
 <%= post.author %>
-<%= image_tag post.image.url(:thumb) %>
+<%= image_tag post.image.url(:medium) %>
 <%= simple_format post.body %>
 
 <h2>Comments</h2>
