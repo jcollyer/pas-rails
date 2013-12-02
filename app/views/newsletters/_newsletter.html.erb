@@ -2,6 +2,7 @@
 <h3><%= newsletter.subtitle %></h3>
 <p><%= newsletter.date.strftime("%m/%d/%Y") %></p>
 <%= image_tag newsletter.image.url(:medium) %>
-<%=  markdown(newsletter.body) %>
 
-
+<% if not current_page?(root_url) %><!-- dont show this on home page -->
+  <%=  markdown(newsletter.body) %>
+<% end %>
