@@ -1,4 +1,6 @@
 <h2><%= link_to_unless_current newsletter.title, newsletter %></h2>
+<h3><%= newsletter.subtitle %></h3>
+<p><%= newsletter.date.strftime("%m/%d/%Y") %></p>
 <%= image_tag newsletter.image.url(:medium) %>
 <%=  markdown(newsletter.body) %>
 

@@ -9,6 +9,14 @@
   <strong>Title:</strong>
   <%= @newsletter.title %>
 </p>
+<p>
+  <strong>Subtitle:</strong>
+  <%= @newsletter.subtitle %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @newsletter.date.strftime("%m/%d/%Y") %>
+</p>
 
 <p>
   <strong>Body:</strong>
