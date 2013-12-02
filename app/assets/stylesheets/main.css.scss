@@ -36,7 +36,11 @@ a {
     background: #53a1b8;
   }
 }
-
+.circle-image {
+  box-shadow: 0 0 7px #333;
+  border-radius: 50%;
+  border: 2px solid white;
+}
 #nav {
   a {
     text-align: center;
@@ -76,11 +80,6 @@ a {
 .header-image {
   margin: 0px auto;
   width: 140px;
-  img {
-    box-shadow: 0 0 7px #333;
-    border-radius: 50%;
-    border: 2px solid white;
-  }
 }
 
 .box1 {
