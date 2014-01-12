@@ -1,18 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <iframe width="560" height="315" src="//<%= @medium.youtube %>?rel=0" frameborder="0" allowfullscreen></iframe>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @medium.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @medium.body %>
-</p>
-
-<%= link_to 'Edit', edit_medium_path(@medium) %> |
-<%= link_to 'Back', media_path %>
+<div class="row">
+  <div class="small-12 columns">
+    <p id="notice"><%= notice %></p>
+    <p>
+      <iframe width="560" height="315" src="//<%= @medium.youtube %>?rel=0" frameborder="0" allowfullscreen></iframe>
+    </p>
+    <p>
+      <strong>Title:</strong>
+      <%= @medium.title %>
+    </p>
+    <p>
+      <strong>Body:</strong>
+      <%= @medium.body %>
+    </p>
+    </h3><%= link_to 'Edit', edit_medium_path(@medium) %></h3>
+    </h3><%= link_to 'Back', media_path %></h3>
+  </div>
+</div>
