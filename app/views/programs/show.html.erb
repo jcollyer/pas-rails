@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="small-12 columns">
+    <p id="notice"><%= notice %></p>
+    <p>
+      <strong>Title:</strong>
+      <%= @program.title %>
+    </p>
+    <p>
+      <strong>Body:</strong>
+      <%= @program.body %>
+    </p>
+    <h3><%= link_to 'Edit', edit_program_path(@program) %></h3>
+    <h3><%= link_to 'Back', programs_path %></h3>
+  </div>
+</div>
