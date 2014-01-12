@@ -1,5 +1,7 @@
-<h1>Listing newsletters</h1>
-
-<%= render :partial => @newsletters %>
-
-<%= link_to 'New Newsletter', new_newsletter_path %>
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Listing newsletters</h1>
+    <h3><%= render :partial => @newsletters %></h3>
+    <h3><%= link_to 'New Newsletter', new_newsletter_path %></h3>
+  </div>
+</div>

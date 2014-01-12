@@ -1,27 +1,26 @@
-<p id="notice"><%= notice %></p>
-
-
-<p>
-  <%= image_tag @newsletter.image.url(:medium) %>
-</p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @newsletter.title %>
-</p>
-<p>
-  <strong>Subtitle:</strong>
-  <%= @newsletter.subtitle %>
-</p>
-<p>
-  <strong>Date:</strong>
-  <%= @newsletter.date.strftime("%m/%d/%Y") %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= markdown(@newsletter.body) %>
-</p>
-
-<%= link_to 'Edit', edit_newsletter_path(@newsletter) %> |
-<%= link_to 'Back', newsletters_path %>
+<div class="row">
+  <div class="small-12 columns">
+    <p id="notice"><%= notice %></p>
+    <p>
+      <%= image_tag @newsletter.image.url(:medium) %>
+    </p>
+    <p>
+      <strong>Title:</strong>
+      <%= @newsletter.title %>
+    </p>
+    <p>
+      <strong>Subtitle:</strong>
+      <%= @newsletter.subtitle %>
+    </p>
+    <p>
+      <strong>Date:</strong>
+      <%= @newsletter.date.strftime("%m/%d/%Y") %>
+    </p>
+    <p>
+      <strong>Body:</strong>
+      <%= markdown(@newsletter.body) %>
+    </p>
+    <h3><%= link_to 'Edit', edit_newsletter_path(@newsletter) %></h3>
+    <h3><%= link_to 'Back', newsletters_path %></h3>
+  </div>
+</div>
