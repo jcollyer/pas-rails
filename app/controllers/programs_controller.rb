@@ -5,6 +5,7 @@ class ProgramsController < ApplicationController
   # GET /programs.json
   def index
     @programs = Program.all
+    @photos = Photo.all
   end
 
   # GET /programs/1

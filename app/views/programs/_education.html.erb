@@ -1,0 +1,4 @@
+<% @photos.each do |photo| %>
+  <%= image_tag photo.image.url(:medium) %>
+  <h3><%= photo.name %></h3>
+<% end %>
