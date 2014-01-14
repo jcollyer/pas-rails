@@ -1,5 +1,7 @@
 PasRails::Application.routes.draw do
 
+  resources :photos
+
   root :to => 'static#home'
 
   resources :programs
