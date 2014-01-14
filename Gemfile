@@ -38,6 +38,9 @@ gem "paperclip", "~> 3.0"
 gem "aws-sdk"
 
 gem "redcarpet"
+
+#logs for heroku
+gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
