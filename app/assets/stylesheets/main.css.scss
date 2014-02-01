@@ -10,6 +10,11 @@ a {
   text-decoration: none;
 }
 textarea { min-height: 400px; }
+
+.display-block {
+  display: block;
+}
+
 #promo {
   background: white;
   box-shadow: 0 -4px 9px -8px #444 inset;
@@ -123,6 +128,17 @@ textarea { min-height: 400px; }
     font-size: 470%;
     margin: 10px auto;
   }
+  h2 {
+    margin: 5px auto;
+    line-height: 1em;
+  }
+  h5 {
+    margin: 5px auto;
+    line-height: 1em;
+    background: #555;
+    color: #fff;
+    padding: 2px 5px;
+  }
 }
 
 .buffer2 {
@@ -134,3 +150,37 @@ textarea { min-height: 400px; }
 .buffer5 {
   margin: 10px auto;
 }
+
+
+
+
+
+
+
+.example {
+  background: white;
+  border: 1px solid #ddd;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: left;
+  .example-inner {
+    padding: 10px;
+    width: 100%;
+    p, h3, h5 {
+      margin: 0px;
+      line-height: 20px;
+    }
+    .bigger {
+      width: 70%;
+      float: left;
+    }
+    .smaller {
+      width: 30%;
+      float: left;
+    }
+  }
+  .example-inner:nth-child(even) {
+    background: #eee;
+  }
+}
+

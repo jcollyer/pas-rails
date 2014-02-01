@@ -1,7 +1,7 @@
 <div id="header">
   <div class="row">
     <div class="small-12 large-6 columns header-left">
-      <%= image_tag "logo.png", :class => "logo" %>
+      <%= image_tag "logo.png", class: "logo" %>
       <div class="header-image"><%= image_tag "header-home.jpg", :class => "circle-image" %></div>
     </div>
 
@@ -17,12 +17,15 @@
 <div class="row">
   <div class="small-12 large-6 columns stylebox1">
     <h1>Blog</h1>
+    <h1>Antonia</h1>
     <%= render :partial => @posts %>
     <%= link_to "All Blog Posts", posts_path %>
   </div>
   <div class="small-12 large-6 columns stylebox2 ">
     <h1>Newsletters</h1>
     <%= render :partial => @newsletters %>
-    <%= link_to "All Newsletters", newsletters_path %>
+  </div>
+  <div class="small-12 large-6 columns stylebox2 ">
+    <%= link_to "All Newsletters", newsletters_path, class: "text-center display-block" %>
   </div>
 </div>

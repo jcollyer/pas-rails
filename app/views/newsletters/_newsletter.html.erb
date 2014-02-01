@@ -1,8 +1,14 @@
-<h2><%= link_to_unless_current newsletter.title, newsletter %></h2>
-<h3><%= newsletter.subtitle %></h3>
-<p><%= newsletter.date.strftime("%m/%d/%Y") %></p>
-<%= image_tag newsletter.image.url(:medium) %>
-
-<% if not current_page?(root_url) %><!-- dont show this on home page -->
-  <%=  markdown(newsletter.body) %>
-<% end %>
+<div class="small-6 columns">
+  <h2><%= link_to_unless_current newsletter.title, newsletter %></h2>
+  <h5><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
+  <p><%= newsletter.subtitle %></p>
+</div>
+<div class="small-6 columns">
+  <h2>&nbsp;</h2>
+  <%= image_tag newsletter.image.url(:medium) %>
+</div>
+<div class="small-12 columns">
+  <% if not current_page?(root_url) %><!-- dont show this on home page -->
+    <%=  markdown(newsletter.body) %>
+  <% end %>
+</div>
