@@ -14,6 +14,14 @@ a {
   display: block;
 }
 
+.hh1 {
+  background: #ddd;
+  color: #777;
+  padding: 5px 10px;
+  line-height: 1em;
+  border-radius: 2px
+}
+
 #promo {
   background: white;
   box-shadow: 0 -4px 9px -8px #444 inset;
@@ -45,6 +53,8 @@ a {
   box-shadow: 0 0 7px #333;
   border-radius: 50%;
   border: 2px solid white;
+  float:left;
+  margin: 7px;
 }
 #nav {
   background: #f8f8f9;
@@ -149,9 +159,6 @@ a {
 .buffer5 {
   margin: 10px auto;
 }
-
-
-
 
 
 .bigtext {min-height:400px;}
