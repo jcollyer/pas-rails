@@ -10,8 +10,11 @@
       </ul>
     </div>
   <% end %>
+
+  <%= render 'markdown/markdown' %>
+
   <div class="field">
-    <%= f.label :youtube %>
+    <%= f.label "YouTube url" %>
     <%= f.text_field :youtube %>
   </div>
   <div class="field">
