@@ -3,11 +3,11 @@
     <p id="notice"><%= notice %></p>
     <p>
       <strong>Title:</strong>
-      <%= @program.title %>
     </p>
+     <h1><%= @program.title %></h1>
     <p>
       <strong>Body:</strong>
-      <%= @program.body %>
+      <%= markdown(@program.body) %>
     </p>
     <h3><%= link_to 'Edit', edit_program_path(@program) %></h3>
     <h3><%= link_to 'Back', programs_path %></h3>

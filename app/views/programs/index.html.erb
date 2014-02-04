@@ -13,15 +13,21 @@
   </div>
 </div>
 <div class="row">
+
   <div class="small-12 columns">
-    <h1>programs - <%= link_to 'New Program', new_program_path %></h1>
+    <h1><%= link_to 'New Program', new_program_path %></h1>
   </div>
+
   <div class="small-8 columns">
     <% @programs.each do |program| %>
+      <h1 class="hh1"><%= program.title %></h1>
+
       <h2>
-        <%= program.title %> - <%= link_to 'Edit', edit_program_path(program) %> - <%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_program_path(program) %> - <%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %>
       </h2>
-      <div><%= program.body %></div>
+
+
+      <div><%= markdown(program.body) %></div>
     <% end %>
   </div>
   <div class="small-4 columns">
