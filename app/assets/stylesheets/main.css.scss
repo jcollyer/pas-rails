@@ -21,6 +21,13 @@ a {
   line-height: 1em;
   border-radius: 2px
 }
+.hh5 {
+  margin: 5px auto;
+  line-height: 1em;
+  background: #555;
+  color: #fff;
+  padding: 2px 5px;
+}
 
 #promo {
   background: white;
@@ -49,7 +56,7 @@ a {
     background: #53a1b8;
   }
 }
-.circle-image {
+.left-image {
   box-shadow: 0 0 7px #333;
   border-radius: 50%;
   border: 2px solid white;
@@ -140,13 +147,6 @@ a {
   h2 {
     margin: 5px auto;
     line-height: 1em;
-  }
-  h5 {
-    margin: 5px auto;
-    line-height: 1em;
-    background: #555;
-    color: #fff;
-    padding: 2px 5px;
   }
 }
 
