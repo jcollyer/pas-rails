@@ -1,0 +1,35 @@
+<%= form_for(@gift) do |f| %>
+  <% if @gift.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gift.errors.count, "error") %> prohibited this gift from being saved:</h2>
+
+      <ul>
+      <% @gift.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= render 'markdown/markdown' %>
+
+  <div class="field">
+    <%= f.label "Section - A" %>
+    <%= f.text_area :section, class: "bigtext"%>
+  </div>
+  <div class="field">
+    <%= f.label "Section - B" %>
+    <%= f.text_area :sectionb, class: "bigtext" %>
+  </div>
+  <div class="field">
+    <%= f.label "Section - C" %>
+    <%= f.text_area :sectionc, class: "bigtext" %>
+  </div>
+  <div class="field">
+    <%= f.label "Section - D" %>
+    <%= f.text_area :sectiond, class: "bigtext" %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
