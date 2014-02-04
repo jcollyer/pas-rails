@@ -13,13 +13,18 @@
   </div>
 </div>
 <div class="row">
-  <div class="small-12 columns">
-    <h1>Listing newsletters</h1>
-  </div>
-  <div class="small-12 columns">
+  <div class="small-7 columns">
     <%= render :partial => @newsletters %>
   </div>
+  <div class="large-3 small-12 columns">
+    <% @newsletters.each do |newsletter| %>
+      <%= image_tag newsletter.image.url(:medium) %>
+    <% end %>
+  </div>
+</div>
+<div class="row">
   <div class="small-12 columns">
     <h3><%= link_to 'New Newsletter', new_newsletter_path %></h3>
   </div>
 </div>
+
