@@ -39,10 +39,8 @@ gem "aws-sdk"
 
 gem "redcarpet"
 
-group :production do
-  #logs for heroku
-  gem 'rails_12factor', group: :production
-end
+#logs for heroku
+gem 'rails_12factor', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
