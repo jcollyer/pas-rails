@@ -14,8 +14,8 @@
 </div>
 <div class="row">
 <% @gifts.each do |gift| %>
-  <h2><%= link_to 'Edit', edit_gift_path(gift) %></h2>
-   <h2><%= link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %></h2>
+  <h1><%= link_to 'Edit', edit_gift_path(gift) %></h1>
+   <%# link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %>
   <div class="small-12 columns"><%= markdown(gift.section) %></div>
   <div class="small-12 columns"><%= markdown(gift.sectionb) %></div>
   <div class="small-12 columns"><%= markdown(gift.sectionc) %></div>
