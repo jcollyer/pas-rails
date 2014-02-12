@@ -5,7 +5,7 @@
     <h5 class="hh5"><%= @newsletter.date.strftime("%m/%d/%Y") %></h5>
     <h4><%= @newsletter.subtitle %></h4>
     <% if not current_page?(root_url) %><!-- dont show this on home page -->
-      <%= image_tag @newsletter.image.url(:medium), class: "left" %>
+      <%= image_tag @newsletter.image.url(:medium), class: "left-image" %>
       <%=  markdown(@newsletter.body) %>
     <% end %>
     <h3><%= link_to 'Edit', edit_newsletter_path(@newsletter) %></h3>
