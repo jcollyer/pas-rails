@@ -18,13 +18,13 @@
   <div class="small-12 large-6 columns stylebox1">
     <h1>Blog</h1>
     <%= render :partial => @posts %>
-    <%= link_to "All Blog Posts", posts_path %>
+    <%= link_to "All Blog Posts", posts_path, class: "button2 text-center display-block" %>
   </div>
   <div class="small-12 large-6 columns stylebox2 ">
     <h1>Newsletters</h1>
     <%= render :partial => @newsletters %>
   </div>
   <div class="small-12 large-6 columns stylebox2 ">
-    <%= link_to "All Newsletters", newsletters_path, class: "text-center display-block" %>
+    <%= link_to "All Newsletters", newsletters_path, class: "button text-center display-block" %>
   </div>
 </div>
