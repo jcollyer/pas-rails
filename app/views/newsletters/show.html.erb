@@ -1,26 +1,18 @@
 <div class="row">
   <div class="small-12 columns">
     <p id="notice"><%= notice %></p>
-    <p>
-      <%= image_tag @newsletter.image.url(:medium) %>
-    </p>
-    <p>
-      <strong>Title:</strong>
-      <%= @newsletter.title %>
-    </p>
-    <p>
-      <strong>Subtitle:</strong>
-      <%= @newsletter.subtitle %>
-    </p>
-    <p>
-      <strong>Date:</strong>
-      <%= @newsletter.date.strftime("%m/%d/%Y") %>
-    </p>
-    <p>
-      <strong>Body:</strong>
-      <%= markdown(@newsletter.body) %>
-    </p>
+    <h1 class="hh1"><%= link_to_unless_current @newsletter.title, @newsletter %></h1>
+    <h5 class="hh5"><%= @newsletter.date.strftime("%m/%d/%Y") %></h5>
+    <h4><%= @newsletter.subtitle %></h4>
+    <% if not current_page?(root_url) %><!-- dont show this on home page -->
+      <%= image_tag @newsletter.image.url(:medium), class: "left" %>
+      <%=  markdown(@newsletter.body) %>
+    <% end %>
     <h3><%= link_to 'Edit', edit_newsletter_path(@newsletter) %></h3>
-    <h3><%= link_to 'Back', newsletters_path %></h3>
+    <h3><%= link_to 'Back', @newsletters_path %></h3>
   </div>
 </div>
+
+
+
+
