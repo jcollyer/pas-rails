@@ -1,15 +1,18 @@
 <div class="row">
   <div class="small-12 columns">
     <p id="notice"><%= notice %></p>
-    <p>
-      <strong>Title:</strong>
-    </p>
-     <h1><%= @program.title %></h1>
-    <p>
-      <strong>Body:</strong>
-      <%= markdown(@program.body) %>
-    </p>
-    <h3><%= link_to 'Edit', edit_program_path(@program) %></h3>
+    <div class="small-8 columns">
+      <h1 class="hh1"><%= @program.title %></h1>
+      <div><%= markdown(@program.body) %></div>
+    </div>
+    <div class="small-4 columns">
+      <%# render "education" %>
+    </div>
+  </div>
+  <div class="small-12 columns">
+    <h3><%= link_to 'Edit', edit_program_path(@program) %> - <%= link_to 'Destroy', @program, method: :delete, data: { confirm: 'Are you sure?' } %></h3>
     <h3><%= link_to 'Back', programs_path %></h3>
   </div>
 </div>
+
+
