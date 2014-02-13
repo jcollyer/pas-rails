@@ -71,14 +71,6 @@ a {
   }
 }
 
-.left-image {
-  box-shadow: 0 0 7px #333;
-  border-radius: 50%;
-  border: 2px solid white;
-  float:left;
-  margin: 7px;
-}
-
 .social {
   padding: 10px;
   height: 100px;
@@ -87,6 +79,14 @@ a {
     float: left;
     margin: 4px;
   }
+}
+
+.left-image {
+  box-shadow: 0 0 7px #333;
+  border-radius: 50%;
+  border: 2px solid white;
+  float:left;
+  margin: 7px;
 }
 
 #nav {
