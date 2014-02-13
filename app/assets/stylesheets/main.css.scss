@@ -79,6 +79,16 @@ a {
   margin: 7px;
 }
 
+.social {
+  padding: 10px;
+  height: 100px;
+  margin-bottom: 10px;
+  .social_item {
+    float: left;
+    margin: 4px;
+  }
+}
+
 #nav {
   background: #f8f8f9;
   a {
@@ -130,7 +140,7 @@ a {
     background: rgba(0,0,0,0.2);
     border-radius: 4px;
     color: #ddd;
-    margin: 40px auto;
+    margin: 40px auto 0px;
     padding: 20px;
   }
 }
