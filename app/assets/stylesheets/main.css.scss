@@ -138,6 +138,14 @@ a {
   }
   .header-right {
     background: rgba(0,0,0,0.2);
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #ddd;
+    margin: 40px auto 0px;
+    padding: 20px;
+  }
+  .header-home-right {
+    background: rgba(0,0,0,0.2);
     border-radius: 4px;
     color: #ddd;
     margin: 40px auto 0px;
