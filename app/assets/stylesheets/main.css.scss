@@ -176,6 +176,9 @@ a {
   }
 }
 
+.buffer1 {
+  margin: 80px auto;
+}
 .buffer2 {
   margin: 40px auto;
 }
@@ -186,6 +189,16 @@ a {
   margin: 10px auto;
 }
 
+.show-mobile {
+  @media all and (min-width: "1024px"){
+    display: none;
+  }
+}
+.show-desktop {
+  @media all and (max-width: "1024px"){
+    display: none;
+  }
+}
 
 .bigtext {min-height:400px;}
 
