@@ -1,17 +1,18 @@
-<h2><%= link_to_unless_current post.title, post %></h2>
-<%= post.author %>
-<%= image_tag post.image.url(:medium) %>
-<%= simple_format post.body %>
-
-<h2>Comments</h2>
-<div id="comments">
+<div class="clearfix">
+  <h2><%= link_to_unless_current post.title, post %></h2>
+  <p class="hh5"><%= post.author %></p>
+  <h4><%= time_ago_in_words(post.created_at) %> ago</h4>
+  <%= image_tag post.image.url(:medium), class: "left-image" %>
+  <%= simple_format post.body %>
+</div>
+<div class="comments">
+  <h2 class="hh1">Comments</h2>
   <%= render :partial => post.comments %>
 </div>
-
-<%= form_for [post, Comment.new] do |f| %>
-  <p>
-    <%= f.label :body, "New comment" %><br/>
-    <%= f.text_area :body %>
-  </p>
-  <p><%= f.submit "Add comment" %></p>
-<% end %>
+<div class="new-comment">
+  <%= form_for [post, Comment.new] do |f| %>
+    <p><%= f.label :body, "New comment" %></p>
+    <p><%= f.text_area :body %></p>
+    <p><%= f.submit "Add comment" %></p>
+  <% end %>
+</div>

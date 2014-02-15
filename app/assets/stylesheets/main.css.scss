@@ -230,3 +230,13 @@ a {
   }
 }
 
+.comments {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0px 3%;
+  p{margin: 0px auto 4px;}
+}
+
+.new-comment {
+  @extend .comments;
+}
