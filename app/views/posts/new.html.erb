@@ -1,7 +1,13 @@
 <div class="row">
-  <div class="small-12 columns"><h1>New post</h1>
-    <h1>New Posts</h1>
+  <div class="small-12 large-8 columns">
+    <h1>New blog post</h1>
     <%= render 'form' %>
     <h3><%= link_to 'Back', posts_path %></h3>
+  </div>
+  <div class="small-12 large-4 columns">
+    <div class="buffer1 show-desktop">&nbsp;</div>
+    <div class="buffer1 show-desktop">&nbsp;</div>
+    <div class="buffer2 show-desktop">&nbsp;</div>
+    <%= render "markdown/markdown" %>
   </div>
 </div>
