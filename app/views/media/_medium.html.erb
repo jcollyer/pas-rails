@@ -2,7 +2,8 @@
   <h1 class="hh1"><%= medium.title %></h1>
   <h3><%= link_to "Show", medium %></h3>
   <div class="small-12 large-7 columns">
-    <iframe width="560" height="315" src="//<%= medium.youtube %>?rel=0" frameborder="0" allowfullscreen></iframe>
+    <div class="buffer4"></div>
+    <iframe width="560" height="315" src="<%= medium.youtube %>" frameborder="0" allowfullscreen></iframe>
   </div>
   <div class="small-12 large-5 columns">
     <%=  markdown(medium.body) %>
