@@ -151,13 +151,19 @@ a {
   border-bottom-left-radius: 4px;
   color: white;
   padding-bottom: 30px;
+  p,h2,h4{margin: 2px auto;}
+  h2{
+    text-align: center;
+    font-size: 200%;
+  }
   h1 {
     text-align: center;
-    font-size: 600%;
+    font-size: 450%;
     margin: 10px auto;
     text-shadow: 0 -1px 0 #444;
     line-height: 1em;
   }
+  .hh5 {background:#295764;}
 }
 
 .stylebox2 {
@@ -168,12 +174,18 @@ a {
   h1 {
     text-align: center;
     font-size: 470%;
-    margin: 10px auto;
+    margin: -5px auto 40px;
+    line-height: 0.9em;
   }
   h2 {
     margin: 5px auto;
     line-height: 1em;
   }
+}
+
+.comments {
+  padding: 0px 3%;
+  p{margin: 0px auto 4px;}
 }
 
 .buffer1 {
@@ -228,15 +240,4 @@ a {
   .example-inner:nth-child(even) {
     background: #eee;
   }
-}
-
-.comments {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 0px 3%;
-  p{margin: 0px auto 4px;}
-}
-
-.new-comment {
-  @extend .comments;
 }
