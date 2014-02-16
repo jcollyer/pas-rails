@@ -1,9 +1,10 @@
-<h1 class="hh1"><%= link_to_unless_current newsletter.title, newsletter %></h1>
-<h5 class="hh5"><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
-<h2><%= newsletter.subtitle %></h2>
-<% if not current_page?(root_url) %><!-- dont show this on home page -->
-  <%= image_tag newsletter.image.url(:medium), class: "left-image" %>
-  <%=  markdown(newsletter.body) %>
-<% end %>
-
-
+<div class="clearfix">
+  <h2 class="hh1"><%= link_to_unless_current newsletter.title, newsletter %></h2>
+  <h5 class="hh5"><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
+  <h2><%= newsletter.subtitle %></h2>
+  <% if not current_page?(root_url) %><!-- dont show this on home page -->
+    <%= image_tag newsletter.image.url(:medium), class: "left-image" %>
+    <%=  markdown(newsletter.body) %>
+  <% end %>
+  <div class="buffer4"></div>
+</div>
