@@ -8,7 +8,11 @@
       <%= image_tag @newsletter.image.url(:medium), class: "left-image" %>
       <%=  markdown(@newsletter.body) %>
     <% end %>
-    <h3><%= link_to 'Edit', edit_newsletter_path(@newsletter) %></h3>
+    <% if current_user %>
+      <h1 class="auth">
+        <%= link_to 'Edit', edit_newsletter_path(@newsletter) %>
+      </h1>
+    <% end %>
     <h3><%= link_to 'Newsletters', newsletters_path %></h3>
   </div>
 </div>

@@ -14,7 +14,11 @@
 </div>
 <div class="row">
   <div class="small-12 columns">
-    <h1><%= link_to 'New Newsletter', new_newsletter_path %></h1>
+    <% if current_user %>
+      <h1 class="auth">
+        <%= link_to 'New Newsletter', new_newsletter_path %>
+      </h1>
+    <% end %>
     <%= render :partial => @newsletters %>
   </div>
 </div>
