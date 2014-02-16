@@ -1,6 +1,10 @@
 <div class="row">
   <h1 class="hh1"><%= medium.title %></h1>
-  <h3><%= link_to "Show", medium %></h3>
+  <% if current_user %>
+    <p class="auth">
+      <%= link_to "Show", medium %>
+    </p>
+  <% end %>
   <div class="small-12 large-7 columns">
     <div class="buffer4"></div>
     <iframe width="560" height="315" src="<%= medium.youtube %>" frameborder="0" allowfullscreen></iframe>

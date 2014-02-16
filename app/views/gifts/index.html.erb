@@ -15,7 +15,7 @@
 <div class="row">
 <% @gifts.each do |gift| %>
   <% if current_user %>
-    <h1>
+    <h1 class="auth">
       <%= link_to 'Edit', edit_gift_path(gift) %>
     </h1>
   <% end %>

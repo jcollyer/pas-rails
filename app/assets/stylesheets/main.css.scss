@@ -32,7 +32,16 @@ a {
   color: #fff;
   padding: 2px 5px;
 }
-
+.auth {
+  background: green;
+  border-radius: 4px;
+  margin: 30px auto;
+  a{
+    color: white;
+    display: block;
+    padding: 20px;
+  }
+}
 #promo {
   background: white;
   box-shadow: 0 -4px 9px -8px #444 inset;
@@ -118,7 +127,7 @@ a {
 
 #header {
   background: #53a1b8;
-  margin: 0px auto 50px;
+  margin: 0px auto 10px;
   text-align: center;
   h1{
     font-size: 300%;

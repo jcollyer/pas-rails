@@ -26,9 +26,8 @@
 
 
   <% if current_user %>
-    <h1 class="auth">
-      <%= link_to 'Edit', edit_program_path(program) %> - <%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </h1>
+    <p class="auth"><%= link_to 'Edit', edit_program_path(program) %></p>
+    <p class="auth"><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   <% end %>
 
       <div><%= markdown(program.body) %></div>
