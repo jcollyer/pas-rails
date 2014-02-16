@@ -41,6 +41,10 @@ gem "redcarpet"
 
 #logs for heroku
 gem 'rails_12factor', group: :production
+
+#for User auth
+gem "bcrypt-ruby", :require => "bcrypt"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

@@ -14,7 +14,11 @@
 </div>
 <div class="row">
 <% @gifts.each do |gift| %>
-  <h1><%= link_to 'Edit', edit_gift_path(gift) %></h1>
+  <% if current_user %>
+    <h1>
+      <%= link_to 'Edit', edit_gift_path(gift) %>
+    </h1>
+  <% end %>
    <%# link_to 'Destroy', gift, method: :delete, data: { confirm: 'Are you sure?' } %>
   <h1 class="hh1">Here is how you can help:</h1>
 
