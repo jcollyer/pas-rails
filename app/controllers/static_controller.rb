@@ -1,7 +1,7 @@
 class StaticController < ApplicationController
   def home
     @posts = Post.last
-    @newsletters = Newsletter.all.order('date ASC')
+    @newsletters = Newsletter.all.order('date DESC')
   end
 
   def about
