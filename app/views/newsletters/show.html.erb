@@ -1,11 +1,16 @@
 <div class="row">
-  <div class="small-12 columns">
+  <div class="small-3 columns">
     <p id="notice"><%= notice %></p>
     <% if current_user %>
-      <h1 class="auth">
+      <p class="auth">
         <%= link_to 'Edit', edit_newsletter_path(@newsletter) %>
-      </h1>
+      </p>
+      <p class="auth">
+        <%= link_to 'Destroy', @newsletter, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
     <% end %>
+  </div>
+  <div class="small-12 columns">
     <h1 class="hh1"><%= link_to_unless_current @newsletter.title, @newsletter %></h1>
     <h5 class="hh5"><%= @newsletter.date.strftime("%m/%d/%Y") %></h5>
     <h2><%= @newsletter.subtitle %></h2>
