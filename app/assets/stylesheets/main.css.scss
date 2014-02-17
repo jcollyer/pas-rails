@@ -86,7 +86,14 @@ a {
   margin-bottom: 10px;
   .social_item {
     float: left;
-    margin: 4px;
+    margin: 15px;
+    width: 60px;
+    background: #f8f8f9;
+    border-radius: 50%;
+    transition: background 0.3s;
+    &:hover {
+      background: #53a1b8;
+    }
   }
 }
 
