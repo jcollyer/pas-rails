@@ -1,6 +1,11 @@
 <div class="row">
   <div class="small-12 columns">
     <p id="notice"><%= notice %></p>
+    <% if current_user %>
+      <h3 class="auth"><%= link_to 'Edit', edit_photo_path(@photo) %></h3>
+      </br>
+      <h3 class="auth"><%= link_to 'Back', photos_path %></h3>
+    <% end %>
     <p>
       <strong>Name:</strong>
       <%= @photo.name %>
@@ -18,7 +23,5 @@
       <%= image_tag @photo.image.url(:thumb) %>
     </p>
 
-    <h3><%= link_to 'Edit', edit_photo_path(@photo) %></h3>
-    <h3><%= link_to 'Back', photos_path %></h3>
   </div>
 </div>

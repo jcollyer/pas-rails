@@ -1,8 +1,10 @@
 <div class="row">
   <div class="small-12 columns">
+    </br>
+    <h3 class="auth"><%= link_to 'New Photo', new_photo_path %></h3>
     <h1>Photos</h1>
 
-    <table>
+    <table class="photos_table">
       <thead>
         <tr>
           <th>Name</th>
@@ -21,9 +23,9 @@
             <td><%= photo.category %></td>
             <td><%= photo.description %></td>
             <td><%= image_tag photo.image.url(:thumb) %></td>
-            <td><%= link_to 'Show', photo %></td>
-            <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-            <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Show', photo, class: "auth" %></td>
+            <td><%= link_to 'Edit', edit_photo_path(photo), class: "auth" %></td>
+            <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' }, class: "auth" %></td>
           </tr>
         <% end %>
       </tbody>
@@ -31,6 +33,5 @@
 
     <br>
 
-    <%= link_to 'New Photo', new_photo_path %>
   </div>
 </div>
