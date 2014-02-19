@@ -1,5 +1,11 @@
 <div class="row">
   <div class="small-12 columns"><p id="notice"><%= notice %></p>
+    <% if current_user %>
+      </br>
+      <h3 class="auth"><%= link_to 'Edit', edit_gift_path(@gift) %></h3>
+      </br>
+      <h3 class="auth"><%= link_to 'Back', gifts_path %></h3>
+    <% end %>
     <div class="clearfix">
       <h1 class="hh1">Section A:</h1>
       <%= markdown(@gift.section) %>
@@ -20,7 +26,5 @@
       <%= markdown(@gift.sectiond) %>
     </div>
 
-    <h3><%= link_to 'Edit', edit_gift_path(@gift) %></h3>
-    <h3><%= link_to 'Back', gifts_path %></h3>
   </div>
 </div>
