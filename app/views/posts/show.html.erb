@@ -4,9 +4,17 @@
 
     <div class="clearfix">
       <% if current_user %>
-        <h3 class="auth"><%= link_to 'Edit', edit_post_path(@post) %></h3>
+        <h3 class="auth">
+          <%= link_to 'Edit', edit_post_path(@post) %>
+        </h3>
         <br />
-        <h3 class="auth"><%= link_to 'Back', posts_path %></h3>
+        <h3 class="auth">
+          <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </h3>
+        </br>
+        <h3 class="auth">
+          <%= link_to 'Back', posts_path %>
+        </h3>
       <% end %>
       <h2 class="hh1"><%= link_to_unless_current @post.title, @post %></h2>
       <p class="hh5"><%= @post.author %></p>
