@@ -27,6 +27,7 @@
 
   <% if current_user %>
     <p class="auth"><%= link_to 'Edit', edit_program_path(program) %></p>
+    </br>
     <p class="auth"><%= link_to 'Destroy', program, method: :delete, data: { confirm: 'Are you sure?' } %></p>
   <% end %>
 
