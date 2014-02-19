@@ -9,7 +9,7 @@ PasRails::Application.routes.draw do
   resources :photos
 
   resources :posts do
-    resources :comments, :only => [:create]
+    resources :comments
   end
 
   get "static/about", as: "about"

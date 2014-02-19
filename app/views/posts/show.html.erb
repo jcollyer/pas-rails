@@ -1,7 +1,38 @@
 <div class="row">
   <div class="small-12 columns">
     <p id="notice"><%= notice %></p>
-    <%= render :partial => @post %>
+
+    <div class="clearfix">
+      <h2 class="hh1"><%= link_to_unless_current @post.title, @post %></h2>
+      <p class="hh5"><%= @post.author %></p>
+      <h4><%= time_ago_in_words(@post.created_at) %> ago</h4>
+      <%= image_tag @post.image.url(:medium), class: "left-image" %>
+      <%= simple_format @post.body %>
+    </div>
+    <div class="comments">
+      <h2 class="hh1">Comments</h2>
+
+      <%= div_for @comments do |comment| %>
+        <p>
+          <u>
+            <%= time_ago_in_words(comment.created_at) %> ago
+          </u>
+            - <%= comment.body %>
+            <% if current_user %>
+              <div class="auth">
+                <%= link_to 'Destroy Comment', [@post, comment], method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            <% end %>
+        </p>
+      <% end %>
+
+      <%= form_for [@post, Comment.new] do |f| %>
+        <h4>New comment</h4>
+        <p><%= f.text_area :body %></p>
+        <p><%= f.submit "Add comment" %></p>
+      <% end %>
+    </div>
+
     <h3><%= link_to 'Edit', edit_post_path(@post) %></h3>
     <h3><%= link_to 'Back', posts_path %></h3>
   </div>
