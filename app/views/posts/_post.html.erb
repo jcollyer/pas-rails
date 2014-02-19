@@ -13,7 +13,7 @@
 </div>
 <div class="comments">
   <h2 class="hh1">Comments</h2>
-  <% render :partial => post.comments %>
+  <%= render :partial => post.comments %>
 
   <%= form_for [post, Comment.new] do |f| %>
     <h4>New comment</h4>
