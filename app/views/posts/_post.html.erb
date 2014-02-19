@@ -1,5 +1,5 @@
 <div class="clearfix">
-  <h2 class="hh1"><%= link_to_unless_current post.title, post %></h2>
+  <h1 class="hh1 no-margin"><%= post.title %></h1>
   <p class="hh5"><%= post.author %></p>
   <h4><%= time_ago_in_words(post.created_at) %> ago</h4>
   <%= image_tag post.image.url(:medium), class: "left-image" %>
@@ -7,7 +7,7 @@
 </div>
 <div class="comments">
   <h2 class="hh1">Comments</h2>
-  <%= render :partial => post.comments %>
+  <% render :partial => post.comments %>
 
   <%= form_for [post, Comment.new] do |f| %>
     <h4>New comment</h4>
