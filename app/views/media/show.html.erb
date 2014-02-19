@@ -1,6 +1,19 @@
 <div class="row">
   <div class="small-12 large-8 columns">
     <p id="notice"><%= notice %></p>
+    <% if current_user %>
+      <h3 class="auth">
+        <%= link_to 'Edit', edit_medium_path(@medium) %>
+      </h3>
+      </br>
+      <h3 class="auth">
+         <%= link_to 'Destroy', @program, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </h3>
+      </br>
+      <h3 class="auth">
+        <%= link_to 'Back', media_path %>
+      </h3>
+    <% end %>
     <iframe width="560" height="315" src="<%= @medium.youtube %>" frameborder="0" allowfullscreen></iframe>
   </div>
   <div class="small-12 large-4 columns">
@@ -12,10 +25,5 @@
       <strong>Body:</strong>
       <%= @medium.body %>
     </p>
-  </div>
-  <div class="small-12 columns">
-    <h3><%= link_to 'Edit', edit_medium_path(@medium) %> - <%= link_to 'Destroy', @program, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </h3>
-    <h3><%= link_to 'Back', media_path %></h3>
   </div>
 </div>
