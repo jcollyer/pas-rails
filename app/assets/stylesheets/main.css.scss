@@ -44,6 +44,10 @@ a {
     display: block
   }
 }
+a.auth{
+  color: white;
+  padding: 3px;
+}
 
 #promo {
   background: white;
@@ -233,6 +237,12 @@ a {
 
 .bigtext {min-height:400px;}
 
+.photos_table {
+  width: 100%;
+  tr th{
+    text-align: left;
+  }
+}
 .example {
   background: white;
   border: 1px solid #ddd;
