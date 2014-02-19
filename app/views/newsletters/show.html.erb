@@ -5,8 +5,13 @@
       <p class="auth">
         <%= link_to 'Edit', edit_newsletter_path(@newsletter) %>
       </p>
+      </br>
       <p class="auth">
         <%= link_to 'Destroy', @newsletter, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+      </br>
+      <p class="auth">
+        <%= link_to "Back", newsletters_path %>
       </p>
     <% end %>
   </div>
