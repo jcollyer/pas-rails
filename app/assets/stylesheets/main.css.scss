@@ -19,7 +19,7 @@ a {
   color: #777;
   padding: 5px 10px;
   line-height: 1em;
-  border-radius: 2px
+  border-radius: 2px;
 }
 .hh3 {
   text-shadow: 0 1px 0 #fff;
@@ -32,16 +32,19 @@ a {
   color: #fff;
   padding: 2px 5px;
 }
+
 .auth {
   background: green;
   border-radius: 4px;
-  margin: 30px auto;
+  margin: 0px;
+  max-width: 300px;
   a{
     color: white;
-    display: block;
-    padding: 20px;
+    text-align: center;
+    display: block
   }
 }
+
 #promo {
   background: white;
   box-shadow: 0 -4px 9px -8px #444 inset;
@@ -64,7 +67,7 @@ a {
   border: 1px solid #53a1b8;
   border-radius: 2px;
   padding: 0px 10px;
-  transition: all 0.5s;
+  transition: background 0.5s;
   &:hover {
     background: #53a1b8;
   }
@@ -74,12 +77,12 @@ a {
   border: 1px solid white;
   border-radius: 2px;
   padding: 0px 10px;
-  transition: all 0.5s;
+  transition: background 0.5s;
   &:hover {
     background: white;
   }
 }
-
+.no-margin {margin: 0px;}
 .social {
   padding: 10px;
   height: 100px;
