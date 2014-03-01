@@ -1,8 +1,10 @@
+$main-font: 'Coustard', serif;
+
 body {
   line-height: 1.777;
   color: #666a76;
   background: #f8f8f8;
-  font-family: 'Serifa W01 55 Roman', 'Serifa Std', 'Serifa', 'Museo Slab', 'Rockwell', georgia, serif;
+  font-family: $main-font;
 
 }
 a {
