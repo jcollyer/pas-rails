@@ -9,9 +9,8 @@
         <tr>
           <th>Name</th>
           <th>Category</th>
-          <th>Description</th>
           <th>Image</th>
-          <th></th>
+          <th>Display?</th>
           <th></th>
         </tr>
       </thead>
@@ -21,9 +20,8 @@
           <tr>
             <td><%= photo.name %></td>
             <td class="highlight"><%= photo.category %></td>
-            <td><%= photo.description %></td>
             <td><%= image_tag photo.image.url(:thumb) %></td>
-            <td><%= link_to 'Show', photo, class: "auth" %></td>
+            <td><h3><% if photo.on == true %> yes <% else %> no <% end %></h3></td>
             <td><%= link_to 'Edit', edit_photo_path(photo), class: "auth" %></td>
             <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' }, class: "auth" %></td>
           </tr>

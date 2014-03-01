@@ -14,6 +14,10 @@
     <%= f.label :image %>
     <%= f.file_field :image %>
   </div>
+  <div>
+    <%= f.label "Display Image?", class: "left" %>
+    &nbsp;&nbsp;<%= f.check_box :on %>
+  </div>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
