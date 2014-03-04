@@ -1,28 +1,11 @@
 <div class="border-blue">
   <div id="nav">
-    <div class="row">
-      <div class="small-2 columns">
-        <%= nav_link "home", root_url %>
-      </div>
-      <div class="small-2 columns">
-        <%= nav_link "about", about_path %>
-      </div>
-      <div class="small-2 columns">
-        <%= nav_link "newsletters", newsletters_path %>
-      </div>
-      <div class="small-2 columns">
-        <%= nav_link "news&media", media_path %>
-      </div>
-      <div class="small-2 columns">
-        <%= nav_link "Programs", programs_path %>
-      </div>
-      <div class="small-2 columns">
-        <%= nav_link "Blog", posts_path %>
-      </div>
-      <% if current_user %>
-        <%= link_to 'Pictures', photos_path %>
-        <%= link_to 'Log Out', log_out_path %>
-      <% end %>
-    </div>
+    <%= nav_link "home", root_url %>
+    <%= nav_link "about", about_path %>
+    <%= nav_link "newsletters", newsletters_path %>
+    <%= nav_link "news&media", media_path %>
+    <%= nav_link "Programs", programs_path %>
+    <%= nav_link "Blog", posts_path %>
   </div>
+
 </div>
