@@ -91,6 +91,13 @@ a.auth{
   padding: 10px;
   height: 100px;
   margin-bottom: 10px;
+  width: 420px;
+  margin: 0 auto;
+  @media all and (max-width: "767px") {
+    border-bottom: 1px solid #295764;
+    height: 37px;
+    width: 300px;
+  }
   .social_item {
     float: left;
     margin: 10px;
@@ -98,6 +105,9 @@ a.auth{
     background: #f8f8f9;
     border-radius: 50%;
     transition: background 0.3s;
+    @media all and (max-width: "767px") {
+      width: 36px;
+    }
     &:hover {
       background: #53a1b8;
     }
@@ -168,7 +178,7 @@ a.auth{
 
 #header {
   background: #53a1b8;
-  margin: 0px auto 10px;
+  margin: 0px auto;
   text-align: center;
   h1{
     font-size: 300%;
@@ -192,6 +202,9 @@ a.auth{
     color: #ddd;
     margin: 40px auto;
     padding: 20px;
+    @media all and (max-width: "767px"){
+      border-radius: 0px;
+    }
   }
 }
 
