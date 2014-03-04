@@ -20,7 +20,7 @@
     </h1>
   <% end %>
 
-  <div class="small-8 columns">
+  <div class="large-8 small-12 columns">
     <% @programs.each do |program| %>
       <h1 class="hh1"><%= program.title %></h1>
 
@@ -32,7 +32,7 @@
       <div><%= markdown(program.body) %></div>
     <% end %>
   </div>
-  <div class="small-4 columns">
+  <div class="large-4 small-12 columns">
     <div class="buffer4 show-desktop"></div>
     <%= render "photos" %>
   </div>
