@@ -54,9 +54,7 @@ a.auth{
 #promo {
   background: white;
   box-shadow: 0 -4px 9px -8px #444 inset;
-  max-height: 45px;
   padding: 7px;
-  height: 80px;
   h4 {
     margin: 0px 20px;
     text-align: center;
@@ -116,14 +114,32 @@ a.auth{
 
 #nav {
   background: #f8f8f9;
+  height: 60px;
+  @media all and (max-width: "767px"){
+    height: 305px;
+  }
   a {
     text-align: center;
     padding: 10px 0px;
     display: block;
     font-size: 23px;
+    @media all and (max-width: "900px"){
+      font-size: 18px;
+    }
   }
   li {
     list-style-type: none;
+    float: left;
+    width: 16%;
+    @media all and (max-width: "767px"){
+      border-bottom: 1px solid #53a1b8;
+      float: auto;
+      width: 100%;
+      transition: background 0.5s;
+      &:hover {
+        background: #53a1b8;
+      }
+    }
   }
   .active {
     position: relative;
@@ -137,6 +153,9 @@ a.auth{
       position: absolute;
       bottom: 0px;
       left: 45%;
+      @media all and (max-width: "900px"){
+        display: none;
+      }
     }
   }
 }
