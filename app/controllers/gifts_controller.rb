@@ -1,5 +1,6 @@
 class GiftsController < ApplicationController
   before_action :set_gift, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize, except: [:index]
 
   # GET /gifts
   # GET /gifts.json
