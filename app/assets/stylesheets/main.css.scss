@@ -316,6 +316,35 @@ a.auth{
 }
 
 footer {
-  min-height: 300px;
+  min-height: 320px;
   background: #428092;
+  .icon-impresh {
+    width: 518px;
+    height: 320px;
+    background: url(image_path("icon-impresh.png"));
+    margin-left: -110px;
+    opacity: 0.4;
+    float: left;
+  }
+  .plant-text {
+    margin-top: 80px;
+    color: #8db3bd;
+    text-align: center;
+    font-style: italic;
+    font-size: 53px;
+  }
+  #footer-nav{
+    margin-top: 70px;
+    h3{line-height: 0.7em;}
+    li{
+      list-style-type: none;
+      text-align: right;
+      margin-right: 20px;
+      border-bottom: 3px solid transparent;
+      a{color: #8db3bd;}
+      &:hover {
+        border-bottom: 3px solid #8db3bd;
+      }
+    }
+  }
 }
