@@ -336,13 +336,21 @@ a.auth{
 }
 
 #btt{
+  display:none;
   position: fixed;
   bottom: 0px;
   left: 0px;
   background: #428092;
   color: white;
   padding: 20px;
+  cursor: pointer;
+  z-index: 2;
+  &:hover {
+    background: #ddd;
+    color: #333;
+  }
 }
+
 footer {
   min-height: 320px;
   background: #428092;
