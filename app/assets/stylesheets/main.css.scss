@@ -263,6 +263,13 @@ a.auth{
   }
 }
 
+.newsletter-home {
+  position: relative;
+  &:hover {
+    background: #ddd;
+  }
+}
+
 .comments {
   padding: 0px 3%;
   p{margin: 0px auto 4px;}
@@ -328,6 +335,14 @@ a.auth{
   }
 }
 
+#btt{
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  background: #428092;
+  color: white;
+  padding: 20px;
+}
 footer {
   min-height: 320px;
   background: #428092;
@@ -360,17 +375,4 @@ footer {
       }
     }
   }
-}
-
-
-
-
-
-
-
-.pos-r {
-  position: relative;
-}
-.dis-b {
- display: block;
 }
