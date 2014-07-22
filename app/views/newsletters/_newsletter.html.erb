@@ -1,16 +1,37 @@
 <div class="clearfix">
-  <h2 class="hh1"><%= newsletter.title %></h2>
-  <% if current_user %>
-    <div class="auth">
-      <%= link_to "Show", newsletter %>
-    </div>
-    </br>
-  <% end %>
-  <h5 class="hh5"><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
-  <h2><%= newsletter.subtitle %></h2>
-  <% if not current_page?(root_url) %><!-- dont show this on home page -->
+  <% if current_page?(root_url) %><!-- show this on home page only -->
+
+    <% if current_user %>
+      <div class="auth">
+        <%= link_to "Show", newsletter %>
+      </div>
+      </br>
+    <% end %>
+
+    <a href="newsletters/#<%= newsletter.id %>" class="pos-r dis-b">
+      <h2 class="hh1"><%= newsletter.title %></h2>
+      <h5 class="hh5"><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
+      <h2><%= newsletter.subtitle %></h2>
+      <%= image_tag newsletter.image.url(:medium), class: "home-newsletter-image" %>
+      <div class="buffer4"></div>
+    </a>
+
+  <% else %><!-- dont show this on home page -->
+
+    <% if current_user %>
+      <div class="auth">
+        <%= link_to "Show", newsletter %>
+      </div>
+      </br>
+    <% end %>
+
+    <div id="<%= newsletter.id %>"></div>
+    <h2 class="hh1"><%= newsletter.title %></h2>
+    <h5 class="hh5"><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
+    <h2><%= newsletter.subtitle %></h2>
     <%= image_tag newsletter.image.url(:medium), class: "left-image" %>
     <%=  markdown(newsletter.body) %>
-  <% end %>
-  <div class="buffer4"></div>
+    <div class="buffer4"></div>
+
+  <% end%>
 </div>

@@ -128,6 +128,19 @@ a.auth{
   margin: 7px;
 }
 
+.home-newsletter-image {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -45px;
+  right: 0px;
+  box-shadow: 0 0 7px #333;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin: 7px;
+  z-index: 1;
+}
+
 #nav {
   background: #f8f8f9;
   height: 60px;
@@ -347,4 +360,17 @@ footer {
       }
     }
   }
+}
+
+
+
+
+
+
+
+.pos-r {
+  position: relative;
+}
+.dis-b {
+ display: block;
 }
