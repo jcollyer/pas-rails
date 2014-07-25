@@ -11,5 +11,5 @@ class Post < ActiveRecord::Base
     },
     :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
     :url => "/system/:attachment/:id/:style/:filename",
-    :default_url => '/images/:attachment/missing_:style.jpg'
+    :default_url => '/assets/missing_:style.jpg'
 end
