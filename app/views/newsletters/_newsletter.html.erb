@@ -10,10 +10,10 @@
 
     <a href="newsletters/#<%= newsletter.id %>" class="pos-r dis-b">
       <h2 class="hh1"><%= newsletter.title %></h2>
-      <h5 class="hh5"><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
+      <h5 class="hh5"><%if newsletter.date %><%= newsletter.date.strftime("%m/%d/%Y") %><%end%></h5>
       <h2><%= newsletter.subtitle %></h2>
       <%= image_tag newsletter.image.url(:medium), class: "home-newsletter-image" %>
-      <div class="buffer4"></div>
+      <div class="buffer2"></div>
     </a>
   </div>
 
@@ -30,11 +30,11 @@
 
     <div id="<%= newsletter.id %>"></div>
     <h2 class="hh1"><%= newsletter.title %></h2>
-    <h5 class="hh5"><%= newsletter.date.strftime("%m/%d/%Y") %></h5>
+    <h5 class="hh5"><%if newsletter.date %><%= newsletter.date.strftime("%m/%d/%Y") %><%end%></h5>
     <h2><%= newsletter.subtitle %></h2>
     <%= image_tag newsletter.image.url(:medium), class: "left-image" %>
     <%=  markdown(newsletter.body) %>
-    <div class="buffer4"></div>
+    <div class="buffer2"></div>
   </div>
 
 <% end%>
