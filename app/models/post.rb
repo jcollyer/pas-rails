@@ -11,5 +11,5 @@ class Post < ActiveRecord::Base
     },
     :path => ":rails_root/public/system/:attachment/:id/:style/:filename",
     :url => "/system/:attachment/:id/:style/:filename",
-    :default_url => 'http://s3.amazonaws.com/pas_database/images/7/thumb/missing_medium.jpg'
+    :default_url => '/images/:attachment/missing_:style.jpg'
 end
