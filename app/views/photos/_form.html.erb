@@ -20,15 +20,15 @@
   </div>
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true %>
   </div>
   <div class="field">
     <%= f.label :category %>
-    <%= f.text_field :category %>
+    <%= f.text_field :category, required: true %>
   </div>
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_field :description %>
+    <%= f.text_field :description, required: true %>
   </div>
   <div class="actions">
     <%= f.submit %>

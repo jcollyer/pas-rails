@@ -18,15 +18,15 @@
   </div>
   <div class="field">
     <%= f.label :author %>
-    <%= f.text_field :author %>
+    <%= f.text_field :author, required: true %>
   </div>
   <div class="field">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, required: true %>
   </div>
   <div class="field">
     <%= f.label :body %>
-    <%= f.text_area :body, class: "bigtext" %>
+    <%= f.text_area :body, class: "bigtext", required: true %>
   </div>
   <div class="actions">
     <%= f.submit %>

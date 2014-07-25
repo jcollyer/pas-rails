@@ -13,11 +13,11 @@
   <% end %>
   <p>
     <%= f.label :email %><br />
-    <%= f.text_field :email %>
+    <%= f.text_field :email, required: true %>
   </p>
   <p>
     <%= f.label :password_hash %><br />
-    <%= f.password_field :password_hash %>
+    <%= f.password_field :password_hash, required: true %>
   </p>
 
   <p class="button"><%= f.submit %></p>
